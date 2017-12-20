@@ -43,7 +43,8 @@ var verifyIdToken = function(request) {
   .then(function(decodedToken) {
     request.body['decodedToken'] = decodedToken
     return Promise.resolve(request)
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     return Promise.reject(error)
   });
 }
@@ -58,7 +59,8 @@ var getCustomerId = function(request) {
       request.body['customerID'] = results[0].customerID
       return Promise.resolve(request)
     }
-  }).catch(function(error) {
+  })
+  .catch(function(error) {
     return Promise.reject(error)
   })
 }
