@@ -13,23 +13,23 @@ admin.initializeApp({
 });
 
 exports.addSource = function addSource(req, res) {
+  res.status(200).json(process.env.cryptoPath)
+  // req.key = stripeKey
+  // req.deployment = deployment
 
-  req.key = stripeKey
-  req.deployment = deployment
-
-  runtimeVariable.get(req)
-  .then(registerStripe)
-  .then(verifyIdToken)
-  .then(getCustomerId)
-  .then(createSource)
-  .then(function(request) {
-    console.log(request);
-    res.status(200).json(request.body)
-  })
-  .catch(function(error) {
-    console.error(error)
-    res.status(500).send(error)
-  })
+  // runtimeVariable.get(req)
+  // .then(registerStripe)
+  // .then(verifyIdToken)
+  // .then(getCustomerId)
+  // .then(createSource)
+  // .then(function(request) {
+  //   console.log(request);
+  //   res.status(200).json(request.body)
+  // })
+  // .catch(function(error) {
+  //   console.error(error)
+  //   res.status(500).send(error)
+  // })
 }
 
 var registerStripe = function(request) {
