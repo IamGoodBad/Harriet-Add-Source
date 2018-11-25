@@ -13,7 +13,7 @@ admin.initializeApp({
 });
 
 exports.addSource = function addSource(req, res) {
-  res.status(200).send(process.env.cryptoPath)
+  res.status(200).send(process.env.cryptoPath + "poop")
   // req.key = stripeKey
   // req.deployment = deployment
 
