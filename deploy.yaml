@@ -7,4 +7,4 @@ steps:
   - --trigger-http
   - --source=.
   - --entry-point=addSource
-  - Harriet-Add-Source-development # Function name
+  - addSource-development
